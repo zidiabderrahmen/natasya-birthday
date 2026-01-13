@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Untuk Maychella Azzahra Natasya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <button class="lang-toggle" onclick="toggleLanguage()" id="langBtn">🌐 EN</button>
+    <div class="heart-bg" id="heartContainer"></div>
+
+    <!-- Screen 1: Countdown -->
+    <section id="screen1" class="screen active">
+        <div class="text-center z-10">
+            <div class="jakarta-time-pill mb-6 mx-auto w-max" data-key="madeBy">Dibuat dengan penuh cinta, oleh Abdo.</div>
+            <h2 class="cursive text-2xl text-rose-400 mb-2" data-key="happyBday">Selamat Ulang Tahun</h2>
+            <h1 class="serif text-4xl md:text-7xl font-bold mb-12 text-rose-900">Maychella <br class="md:hidden"> Azzahra Natasya</h1>
+            
+            <div class="grid grid-cols-4 gap-4 md:gap-10 mb-16">
+                <div class="flex flex-col">
+                    <span id="days" class="text-4xl md:text-7xl font-light serif">00</span>
+                    <span class="text-[10px] uppercase tracking-tighter mt-1" data-key="unitDays">Hari</span>
+                </div>
+                <div class="flex flex-col">
+                    <span id="hours" class="text-4xl md:text-7xl font-light serif">00</span>
+                    <span class="text-[10px] uppercase tracking-tighter mt-1" data-key="unitHours">Jam</span>
+                </div>
+                <div class="flex flex-col">
+                    <span id="minutes" class="text-4xl md:text-7xl font-light serif">00</span>
+                    <span class="text-[10px] uppercase tracking-tighter mt-1" data-key="unitMins">Menit</span>
+                </div>
+                <div class="flex flex-col">
+                    <span id="seconds" class="text-4xl md:text-7xl font-light serif text-rose-500">00</span>
+                    <span class="text-[10px] uppercase tracking-tighter mt-1" data-key="unitSecs">Detik</span>
+                </div>
+            </div>
+
+            <button id="enterBtn" class="btn-love" disabled onclick="navigateTo(2)" data-key="btnWait">
+                Menunggu Momen...
+            </button>
+        </div>
+    </section>
+
+    <!-- Screen 2: Timeline -->
+    <section id="screen2" class="screen">
+        <div class="text-center mb-12">
+            <h2 class="serif text-3xl md:text-5xl text-rose-900" data-key="timelineTitle">Perjalanan Kita</h2>
+            <p class="text-gray-400 mt-2 text-sm uppercase tracking-widest" data-key="timelineSub">Tap to reveal a memory</p>
+        </div>
+
+        <div class="w-full max-w-2xl flex flex-col items-center">
+            <div class="card-love">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="font-bold text-rose-700" data-key="mem1Title">Foto Pertama</h3>
+                    </div>
+                    <span class="text-xs font-mono text-gray-400">12.10.2024</span>
+                </div>
+                <div class="blur-media" onclick="this.classList.add('revealed')">
+                    <div class="media-hint">
+                        <span class="text-2xl">📸</span>
+                        <p class="text-xs font-medium text-rose-600 mt-2" data-key="tapReveal">Ketuk untuk melihat</p>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?q=80&w=1000&auto=format&fit=crop" alt="Memory">
+                </div>
+                <p class="mt-4 text-sm leading-relaxed italic text-gray-600" data-key="mem1Desc">"Saat ini, aku sadar duniaku akan berubah."</p>
+            </div>
+
+            <div class="card-love">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h3 class="font-bold text-rose-700" data-key="mem2Title">Pesan Suara Pertama</h3>
+                    </div>
+                    <span class="text-xs font-mono text-gray-400">20.11.2024</span>
+                </div>
+                <div class="blur-media" style="aspect-ratio: 16/9;" onclick="this.classList.add('revealed')">
+                    <div class="media-hint">
+                        <span class="text-2xl">🎙️</span>
+                        <p class="text-xs font-medium text-rose-600 mt-2" data-key="tapHear">Dengarkan suaranya</p>
+                    </div>
+                    <div class="placeholder-vid bg-rose-50 flex items-center justify-center">
+                        <span class="text-rose-300 font-serif">Voice Memo Ready</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="btn-love mt-8" onclick="navigateTo(3)" data-key="btnContinue">Lanjutkan</button>
+    </section>
+
+    <!-- Screen 3: Why You Matter -->
+    <section id="screen3" class="screen">
+        <div class="max-w-3xl card-love !bg-transparent !border-none !shadow-none text-center">
+            <h2 class="serif text-4xl md:text-5xl text-rose-900 mb-16" data-key="matterTitle">Mengapa Kamu Berarti?</h2>
+            
+            <div class="space-y-12 text-left">
+                <div class="p-6 bg-white rounded-3xl shadow-sm border-l-4 border-rose-300">
+                    <h3 class="serif text-xl text-rose-700" data-key="matter1Title">Kehadiran yang Menenangkan</h3>
+                    <p class="text-gray-600 font-light mt-2" data-key="matter1Desc">Maychella, kamu memiliki cara luar biasa untuk membuat segalanya terasa lebih baik. Bukan hanya kecantikanmu, tapi ketulusan hatimu yang membuatku sangat menghargaimu.</p>
+                </div>
+
+                <div class="p-6 bg-white rounded-3xl shadow-sm border-l-4 border-rose-300">
+                    <h3 class="serif text-xl text-rose-700" data-key="matter2Title">Inspirasi Tak Terhingga</h3>
+                    <p class="text-gray-600 font-light mt-2" data-key="matter2Desc">Mengenalmu mendorongku untuk menjadi versi terbaik dari diriku. Caramu menghadapi hidup menginspirasiku untuk terus maju dengan penuh semangat.</p>
+                </div>
+
+                <div class="p-6 bg-white rounded-3xl shadow-sm border-l-4 border-rose-300">
+                    <h3 class="serif text-xl text-rose-700" data-key="matter2Title">Inspirasi Tak Terhingga</h3>
+                    <p class="text-gray-600 font-light mt-2" data-key="matter2Desc">Mengenalmu mendorongku untuk menjadi versi terbaik dari diriku. Caramu menghadapi hidup menginspirasiku untuk terus maju dengan penuh semangat.</p>
+                </div>
+
+                <div class="p-6 bg-white rounded-3xl shadow-sm border-l-4 border-rose-300">
+                    <h3 class="serif text-xl text-rose-700" data-key="matter2Title">Inspirasi Tak Terhingga</h3>
+                    <p class="text-gray-600 font-light mt-2" data-key="matter2Desc">Mengenalmu mendorongku untuk menjadi versi terbaik dari diriku. Caramu menghadapi hidup menginspirasiku untuk terus maju dengan penuh semangat.</p>
+                </div>
+
+                <div class="p-6 bg-white rounded-3xl shadow-sm border-l-4 border-rose-300">
+                    <h3 class="serif text-xl text-rose-700" data-key="matter2Title">Inspirasi Tak Terhingga</h3>
+                    <p class="text-gray-600 font-light mt-2" data-key="matter2Desc">Mengenalmu mendorongku untuk menjadi versi terbaik dari diriku. Caramu menghadapi hidup menginspirasiku untuk terus maju dengan penuh semangat.</p>
+                </div>
+            </div>
+
+            <button class="btn-love mt-16" onclick="navigateTo(4)" data-key="btnFinal">Satu Kejutan Lagi</button>
+        </div>
+    </section>
+
+    <!-- Screen 4: Surprise -->
+    <section id="screen4" class="screen">
+        <div class="text-center card-love">
+            <div class="text-6xl mb-6">🎁</div>
+            <h2 class="serif text-3xl mb-4 text-rose-900" data-key="surpriseTitle">Kejutan Terakhir</h2>
+            <p class="text-gray-500 mb-10 max-w-sm mx-auto" data-key="surpriseDesc">Klik tombol di bawah untuk mendengarkan pesan-pesan spesial yang telah kusiapkan.</p>
+            
+            <button id="surpriseBtn" class="btn-love w-full" onclick="playFinalSequence()" data-key="btnOpenGift">
+                Buka Hadiah Suara
+            </button>
+
+            <div id="audioStatus" class="mt-8 text-sm font-medium text-rose-400 h-6 italic"></div>
+            
+            <div class="mt-16 cursive text-2xl text-rose-300" data-key="forever">Selamanya Milikmu.</div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
