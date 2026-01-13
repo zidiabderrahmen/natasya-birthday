@@ -62,7 +62,7 @@ const translations = {
 };
 
 let currentLang = 'id';
-const targetDate = new Date("2026-01-13T00:00:00+07:00").getTime();
+const targetDate = new Date("2026-05-24T00:00:00+07:00").getTime();
 let notePlayed = false;
 
 function toggleLanguage() {
